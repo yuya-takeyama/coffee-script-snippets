@@ -1,6 +1,6 @@
 f = (n) ->
   i = 0
-  id = setInterval(() ->
+  id = setInterval(->
     console.log n
     clearInterval id
   n * 1000)
