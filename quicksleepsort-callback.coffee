@@ -1,4 +1,7 @@
 sleepsort = (list, callback) ->
+  if typeof callback == 'undefined'
+    callback = (n) -> console.log n
+
   f = (n) ->
     setTimeout ->
       callback n
@@ -7,5 +10,4 @@ sleepsort = (list, callback) ->
   for i in list
     f i
 
-sleepsort process.argv.slice(2), (n) ->
-  console.log n
+sleepsort process.argv.slice(2)
