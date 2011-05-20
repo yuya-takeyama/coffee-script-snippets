@@ -1,9 +1,7 @@
 f = (n) ->
-  i = 0
-  id = setInterval(->
+  setTimeout ->
     console.log n
-    clearInterval id
-  n * 1)
+  , n
 
 for i in process.argv.slice(2)
   f i
